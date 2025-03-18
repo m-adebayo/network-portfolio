@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title> Networks and Operating Systems </title>
+</head>
+<body>
+<header>
+    <a href="index.html"><img class= "logo" src="img/logo.png" alt=""></a>
+    <nav>
+        <ul class="navbar">
+        <li> <a href="index.html"> Home </a></li>
+        <div class ="dropdown">
+            <button class="dropdown-button"> Course Content
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="intro-to-NOS.html">Intro to NOS</a>
+                <a href="application-layer.html">Application Layer</a>
+                <a href="transport-layer.html">Transport Layer</a>
+                <a href="network-layer.html">Network Layer</a>
+                <a href="link-layer.html"> Link Layer</a>
+                <a href="intro-to-os.html">Intro to OS</a>
+                <a href="os-scheduling.html">OS Scheduling</a>
+                <a href="literature-review.html">Literature Review</a>
+            </div>
+        </div>
+    </ul>
+</nav>
+</header> 
+ <div class="content-wrapper">
+    <h1>Network Layer</h1>
+    <p>The Network Layer (also known as the Internet Layer) is responsible for routing data packets across networks using IP addresses to identify the source and destination. The core function includes addressing, routing packetisation and fragmentaion and reassembly of the packets. IP addressing provides logical identification for devices. Routing determines the best path for data transmission, using OSPF and BGP. Packetisation involves encapsulating the segnments from the transport layer segments into IP datagrams, and fragmentation ensures the packets fit within the MTU of a network. </p>
+    <p> IP addressing follows a hierachical structure, using IPv4 (32-bit). Different address classes define network sizes. Private addresses are used in local networks, and require Network Address Translation for extenal communication.</p>
+    <p> DHCP (Dynamic Host Configuration Protocol) dynamically assigns IP addresses to hosts as they join a network. It allows devices to obtain temporary IPs. DHCP involves the process of Discover, Offer, Request and Acknowledge (DORA).</p>
+    <p> NAT (Network Address Translation) enables multiple devices within a local network to share a single public IP address, enhancing security and conserving IPv4 addresses. </p>
+    <p>Routing and forwarding are key network layer functions. Routing determines the best oath for data using routing tables and protocols, while forwarding involves moving packets from an input interface to the appropriate output interface. Static routing is manually configured and used mainly in small networks, whereas dynamic routing adapts to network changes.</p>
+ </div>
+</body>
+</html>

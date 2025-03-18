@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title> Networks and Operating Systems </title>
+</head>
+<body>
+<header>
+    <a href="index.html"><img class= "logo" src="img/logo.png" alt=""></a>
+    <nav>
+        <ul class="navbar">
+        <li> <a href="index.html"> Home </a></li>
+        <div class ="dropdown">
+            <button class="dropdown-button"> Course Content
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="intro-to-NOS.html">Intro to NOS</a>
+                <a href="application-layer.html">Application Layer</a>
+                <a href="transport-layer.html">Transport Layer</a>
+                <a href="network-layer.html">Network Layer</a>
+                <a href="link-layer.html"> Link Layer</a>
+                <a href="intro-to-os.html">Intro to OS</a>
+                <a href="literature-review.html">Literature Review</a>
+            </div>
+        </div>
+    </ul>
+</nav>
+</header> 
+<div class="content-wrapper">
+ <h1>Transport Layer</h1>
+ <p> The Transport Layer enables communications between application processes on different hosts. It provides essential services like multiplexing and demultiplexing, reliable data transfer and flow control.</p>
+ <p>Multiplexing and demultiplexing are essential functions to allow multiple devices to share the network.  Multiplexing allows multiple applications to share the same transport layer protocol, whilst demultiplexing ensures that received data is directed to the correct application.</p>
+ <p>The two main protocols used are TCP, which ensures reliable and ordered delivery, and UDP, which offers a faster but less reliable connectionless service.</p>
+<p>Reliable data transfer ensures that data is delivered error-free and in the correct order. This is done by using sequence numbers to number each byte of data, which allows the receiver to reassemble the data in the correct order. Flow control is used to prevent the sender from overwhelming the receiver with data. This is done by the receiver sending messages to the sender to tell it to stop sending data.</p>
+<p>TCP operates as a connection-oriented transport protocol. It establishes a connection using a 3 way handshake and insures data integrity through acknowledgments. </p>
+<p> Congestion control in TCP prevents excessive data transmission that can lead to network congestion. AIMD (Additive Increase, Multiplicative Decrease) gradually increases the sending rate until packet loss occurs, then reduces it. Slow Start allows TCP to start with a low sending rate and increase it to prevent congestion. Retransmit & Recovery quickly detects and retransmits lost packets by using duplicated acknowledgments.</p>
+
+ 
+</div>
+</body>
+</html>

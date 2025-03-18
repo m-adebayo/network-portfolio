@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title> Networks and Operating Systems </title>
+</head>
+<body>
+<header>
+    <a href="index.html"><img class= "logo" src="img/logo.png" alt=""></a>
+    <nav>
+        <ul class="navbar">
+        <li> <a href="index.html"> Home </a></li>
+        <div class ="dropdown">
+            <button class="dropdown-button"> Course Content
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="intro-to-NOS.html">Intro to NOS</a>
+                <a href="application-layer.html">Application Layer</a>
+                <a href="transport-layer.html">Transport Layer</a>
+                <a href="network-layer.html">Network Layer</a>
+                <a href="link-layer.html"> Link Layer</a>
+                <a href="intro-to-os.html">Intro to OS</a>
+                <a href="os-scheduling.html">OS Scheduling</a>
+                <a href="literature-review.html">Literature Review</a>
+            </div>
+        </div>
+    </ul>
+</nav>
+</header> 
+ <div class="content-wrapper">
+    <h1>Link Layer</h1>
+    <p>The Link Layer (also known as the Network Access Layer) is responsible for transferring data physically between connected network nodes.</p>
+    <p>This layer ensures proper framing and link access by encapsulating network layer data into frames for transmission. Additionally, it handles error detection and correction through methods like parity checking, Internet checksum, and Cyclic Redundancy Check (CRC) to identify and fix errors. Flow control regulates data transfer pacing, while half and full duplex modes determine whether both nodes can transmit at the same time.</p>
+    <p>TDMA and FDMA divides the channels into time slots or frequency bands respectively. Random access protocols are used to allow nodes to transmit without pre-allocated slots, detecting and handling collisions dynamically.</p>
+    <p>Switches play a key role in forwarding frames based on MAC addresses, reducing collisioin domains and improving network efficiency. Addressing with LANs relies on MAC addresses, which serve as device identification, and ARP, which maps IP address to MAC addresses for packet delivery.</p>
+ </div>
+</body>
+</html>
