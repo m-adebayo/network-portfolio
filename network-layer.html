@@ -23,7 +23,6 @@
                 <a href="network-layer.html">Network Layer</a>
                 <a href="link-layer.html"> Link Layer</a>
                 <a href="intro-to-os.html">Intro to OS</a>
-                <a href="os-scheduling.html">OS Scheduling</a>
                 <a href="literature-review.html">Literature Review</a>
             </div>
         </div>
@@ -37,6 +36,10 @@
     <p> DHCP (Dynamic Host Configuration Protocol) dynamically assigns IP addresses to hosts as they join a network. It allows devices to obtain temporary IPs. DHCP involves the process of Discover, Offer, Request and Acknowledge (DORA).</p>
     <p> NAT (Network Address Translation) enables multiple devices within a local network to share a single public IP address, enhancing security and conserving IPv4 addresses. </p>
     <p>Routing and forwarding are key network layer functions. Routing determines the best oath for data using routing tables and protocols, while forwarding involves moving packets from an input interface to the appropriate output interface. Static routing is manually configured and used mainly in small networks, whereas dynamic routing adapts to network changes.</p>
+    <img src="img/WK-5-CLIENT.png" alt="">
+    <img src="img/WK-5-SRV.png" alt="">
+    <p>These two Python scripts implement a simple TCP-based client-server communication system, where the client sends a message to the server, and the server acknowledges receipt while saving the received data to a file. The server script begins by creating a TCP socket using socket.SOCK_STREAM, binding it to localhost on port 65432, and listening for incoming connections. When a client connects, the server receives data in 1024-byte chunks, printing each received message before writing it to a file named received_file.txt. After receiving data, the server sends an acknowledgment message and closes the client connection once the transfer is complete.</p>
+    <p>The client script, on the other hand, establishes a TCP connection with the server at localhost:65432. It prompts the user to enter a message, which is then sent to the server. To measure communication latency, the client records the time before sending and after receiving a response. The server's acknowledgment message is displayed on the client side, along with the total time taken for the exchange.</p>
  </div>
 </body>
 </html>

@@ -23,13 +23,31 @@
                 <a href="network-layer.html">Network Layer</a>
                 <a href="link-layer.html"> Link Layer</a>
                 <a href="intro-to-os.html">Intro to OS</a>
-                <a href="os-scheduling.html">OS Scheduling</a>
                 <a href="literature-review.html">Literature Review</a>
             </div>
         </div>
     </ul>
 </nav>
 </header> 
- 
+ <div class="content-wrapper">
+    <h1>Operating Systems</h1>
+    <p>
+        An operating system (OS) is a software that manages computer hardware and software resources and provides common services for computer programs. The operating system is an essential component of the system software in a computer system. Application programs usually require an operating system to function. Its objective is to provide a convenient environment for the execution of application software.
+    </p>
+    <p>
+        The components of an operating system are:
+    </p>
+    <ul>
+        <li>Processor (CPU) - executes instructions</li>
+        <li>Main Memory (RAM) - volatile storage for active programs</li>
+        <li>I/O Modules - interfaces for external devices</li>
+        <li>System Bus = communication link between components</li>
+    </ul>
+    <p> It operates instructions following its instruction cycle - fetch, decode, execute (FDE). The system uses interrupts to handle events such as input/output operations allowing efficient multitasking and resource management.</p>
+    <p>Memory in a computer follows a hierarchy, ranging from fast but small registers and cache memory to slower but larger RAM and secondary storage. Virtual memory extends RAM by using disk space, while paging organizes memory into fixed-size blocks for allocation and retrieval.</p>
+    <p>Input/output (I/O) operations are managed using different techniques. Programmed I/O directly involves the CPU, interrupt-driven I/O allows the processor to perform other tasks while waiting for an operation to complete, and Direct Memory Access (DMA) transfers data between devices and memory without overloading the CPU.</p>
+    <p>A process is an executing program, transitioning through states such as new, ready, running, waiting, and terminated. OS process management includes scheduling tasks efficiently while avoiding synchronization issues like deadlocks, race conditions, and mutual exclusion failures.</p>
+    <p>Different OS architectures affect performance and modularity. A monolithic kernel integrates all services into a single system, while a microkernel keeps only essential functions, improving flexibility. Distributed operating systems manage multiple networked computers as a single unit, optimizing resource sharing.</p>
+ </div>
 </body>
 </html>
