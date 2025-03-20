@@ -36,10 +36,71 @@
     <p> DHCP (Dynamic Host Configuration Protocol) dynamically assigns IP addresses to hosts as they join a network. It allows devices to obtain temporary IPs. DHCP involves the process of Discover, Offer, Request and Acknowledge (DORA).</p>
     <p> NAT (Network Address Translation) enables multiple devices within a local network to share a single public IP address, enhancing security and conserving IPv4 addresses. </p>
     <p>Routing and forwarding are key network layer functions. Routing determines the best oath for data using routing tables and protocols, while forwarding involves moving packets from an input interface to the appropriate output interface. Static routing is manually configured and used mainly in small networks, whereas dynamic routing adapts to network changes.</p>
-    <img src="img/WK-5-CLIENT.png" alt="">
-    <img src="img/WK-5-SRV.png" alt="">
-    <p>These two Python scripts implement a simple TCP-based client-server communication system, where the client sends a message to the server, and the server acknowledges receipt while saving the received data to a file. The server script begins by creating a TCP socket using socket.SOCK_STREAM, binding it to localhost on port 65432, and listening for incoming connections. When a client connects, the server receives data in 1024-byte chunks, printing each received message before writing it to a file named received_file.txt. After receiving data, the server sends an acknowledgment message and closes the client connection once the transfer is complete.</p>
-    <p>The client script, on the other hand, establishes a TCP connection with the server at localhost:65432. It prompts the user to enter a message, which is then sent to the server. To measure communication latency, the client records the time before sending and after receiving a response. The server's acknowledgment message is displayed on the client side, along with the total time taken for the exchange.</p>
+    <img src="img/WK-6-IL.png" alt="">
+    <img src="img/WK-6-CHAL.png" alt="">
+        <p>
+            All private IP addresses start with 10, 172 or 192, although some public IP addresses may also begin with 172 and 192.
+            <br>
+            Using seminar week 2, I have identified that the IP address of the university website (gold.ac.uk) is 159.100.136.66. This means that the universities IP address is public.
+            <br>
+            Theres 2^16 - 2 reliable hosts
+            We -2 as we need to consider the broadcast and network address.
+            <br>
+            Engineering :
+            <br>
+            Starting from 172.16.0.1, you can allocate 30 hosts to the engeneering department.
+            2^5 = 32
+            32 - 5 = 27
+            So the subnet masking would be 172.16.0.1/27
+            It would be allocated 172.16.0.1 - 172.16.0.30
+            <br>
+            We leave 17.16.0.0 and 17.16.0.31 for the network address and broadcast address. Therefore the next department will need to start from 172.16.0.32
+            <br>
+            This department also needs to leave one at the start and end of its usable IP range, as it needs to reserve space for a broadcast address and a network address. Therefore the next departments usable host range will start from 172.16.0.32.
+            <br>
+            Marketing:
+            <br>
+            Starting from 172.16.0.33, you can allocate 15 hosts to the marketing department.
+            <br>
+            2^4 = 16
+            <br>
+            16-2 = 14
+            <br>
+            This means there is not enough usable hosts as 14 is smaller than 15.
+            <br>
+            2^5 = 32
+            <br>
+            32 - 5 = 27
+            <br>
+            So the subnet masking would be 172.16.0.32/27
+            It would be allocated 172.16.0.32 - 172.16.0.62
+            <br>
+            Finance:
+            <br>
+            Starting from 172.16.0.65, we can allocate 10 hosts.
+            <br> 
+            2^4 = 16
+            <br>
+            16-2 =14
+            <br>
+            32 - 4 = 28
+            <br>
+            So the subnet masking would be 17.16.0.64/28
+            It would be allocated 172.16.0.65 - 173.16.0.78
+            <br>
+            HR:
+            <br>
+            Starting from 172.16.0.81, we can allocate 5 hosts.
+            <br>
+            2^3 = 8
+            <br>
+            8-2 = 6
+            <br>
+            32-3= 29
+            <br>
+            So the subnet masking would be 172.16.0.80/29
+            It would be allocated 172.16.0.91 - 172.16.0.86
+        </p>
  </div>
 </body>
 </html>

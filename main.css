@@ -116,12 +116,6 @@ tr:nth-child(even) {
     background-color: #e8eaf6;
 }
 
-/*Week 6 Styling*/
-.wk6{
-    font-size: 14px;
-}
-
-
 /* Video Styling */
 video{
     width: 70%;
@@ -134,4 +128,10 @@ video{
     justify-content: center;
     align-items: center;
 
+}
+.pp-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }

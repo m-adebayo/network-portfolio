@@ -37,13 +37,16 @@
 <p>Reliable data transfer ensures that data is delivered error-free and in the correct order. This is done by using sequence numbers to number each byte of data, which allows the receiver to reassemble the data in the correct order. Flow control is used to prevent the sender from overwhelming the receiver with data. This is done by the receiver sending messages to the sender to tell it to stop sending data.</p>
 <p>TCP operates as a connection-oriented transport protocol. It establishes a connection using a 3 way handshake and insures data integrity through acknowledgments. </p>
 <p> Congestion control in TCP prevents excessive data transmission that can lead to network congestion. AIMD (Additive Increase, Multiplicative Decrease) gradually increases the sending rate until packet loss occurs, then reduces it. Slow Start allows TCP to start with a low sending rate and increase it to prevent congestion. Retransmit & Recovery quickly detects and retransmits lost packets by using duplicated acknowledgments.</p>
-<img src="img/WK-3-SK.png" alt="">
-<p> This code simulates trace route, which traces the route that a packet takes to its destination. The output shows a list of the routers, or hops that the packets travelled to to reach its destination. This will change based on what networks you are connected to. The code below simulates this process with google.co.uk</p>
-<img src="img/WK-3-TR.png" alt="">
 <p> This code simiulates a sender and receiver communicating over a server.</p>
 <img src="img/WK-4-SND.png" alt="">
  <img src="img/WK-4--RCV.png" alt="">
  <img src="img/WK-4-SRV.png" alt="">
+ <p>These next two Python scripts implement a simple TCP-based client-server communication system, where the client sends a message to the server, and the server acknowledges receipt while saving the received data to a file. The server script begins by creating a TCP socket using socket.SOCK_STREAM, binding it to localhost on port 65432, and listening for incoming connections. When a client connects, the server receives data in 1024-byte chunks, printing each received message before writing it to a file named received_file.txt. After receiving data, the server sends an acknowledgment message and closes the client connection once the transfer is complete.</p>
+ <p>The client script, on the other hand, establishes a TCP connection with the server at localhost:65432. It prompts the user to enter a message, which is then sent to the server. To measure communication latency, the client records the time before sending and after receiving a response. The server's acknowledgment message is displayed on the client side, along with the total time taken for the exchange.</p>
+
+ <img src="img/WK-5-CLIENT.png" alt="">
+ <img src="img/WK-5-SRV.png" alt="">
+
 </div>
 </body>
 </html>
